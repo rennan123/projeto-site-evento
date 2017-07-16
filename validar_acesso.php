@@ -1,34 +1,34 @@
 <?php 
 
-session_start();
+	session_start();
 
-require_once('conexao_bd.php');
+	require_once('conexao_bd.php');
 
-$senha = $_POST['senha'];
-$email = $_POST['email'];
+	$email = $_POST['email'];
+	$senha = md5($_POST['senha']);
 
-$sql = " SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha' ";
+	$sql = " SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha' ";
 
-$objBD = new bd();
-$link = $objBD->conecta_mysql();
+	$objBD = new bd();
+	$link = $objBD->conecta_mysql();
 
-$resultado_id  = mysqli_query($link, $sql);
+	$resultado_id = mysqli_query($link, $sql);
 
-if($resultado_id){
-	$dados_usuario = mysqli_fetch_array($resultado_id);
+	if($resultado_id){
+		$dados_usuario = mysqli_fetch_array($resultado_id);
 
-	if(isset($dados_usuario['email'])){
+		if(isset($dados_usuario['email'])){
 
-		$_SESSION['email'] = $dados_usuario['email'];
+			$_SESSION['email'] = $dados_usuario['email'];
 
-		header('Location: home.php');
+			header('Location: home.php');
 
+		} else {
+			header('Location: index.php?erro=1');
+		}
 	} else {
-		header('Location: index.php?erro=1');
+		echo 'Erro na execução da consulta, favor entrar em contato com o admin do site';
 	}
-} else {
-	echo 'Erro na execução da consulta, favor entrar em contato com o admin do site';
-}
 
 
 ?>

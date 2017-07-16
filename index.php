@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $erro = isset($_GET['erro']) ? $_GET['erro'] : 0;
 
@@ -18,98 +18,99 @@ $erro = isset($_GET['erro']) ? $_GET['erro'] : 0;
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	
 	<script>
-		$(document).ready( function() {
-			//verificar se os dados de e-mail e senha foram preenchidos
-			$('#btn_login').click(function(){
+		$(document).ready( function(){
 
-				var campo_vazio = false;
+				//verificar se os campos de usuário e senha foram devidamente preenchidos
+				$('#btn_login').click(function(){
 
-				if ($('#campo_nome').val() == '') {
-					$('#campo_nome').css({'border-color': '#A94442'});
-					campo_vazio = true;
-				} else {
-					$('#campo_nome').css({'border-color': '#CCC'});
-				}
+					var campo_vazio = false;
 
-				if ($('#campo_senha').val() == '') {
-					$('#campo_senha').css({'border-color': '#A94442'});
-					campo_vazio = true;
-				} else {
-					$('#campo_senha').css({'border-color': '#CCC'});
-				}
+					if($('#campo_email').val() == ''){
+						$('#campo_email').css({'border-color': '#A94442'});
+						campo_vazio = true;
+					} else {
+						$('#campo_email').css({'border-color': '#CCC'});
+					}
 
-				if (campo_vazio) return false;
-			});
-		});		
-	</script>
-</head>
+					if($('#campo_senha').val() == ''){
+						$('#campo_senha').css({'border-color': '#A94442'});
+						campo_vazio = true;
+					} else {
+						$('#campo_senha').css({'border-color': '#CCC'});
+					}
 
-<body>
+					if(campo_vazio) return false;
+				});
+			});					
+		</script>
+	</head>
 
-	<nav class="navbar navbar-default navbar-static-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<img src="imagens/logo.png" />
-			</div>
+	<body>
 
-			<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="inscrevase.php">Inscrever-se</a></li>
-					<li class="<?= $erro == 1 ? 'open' : '' ?>">
-						<a id="entrar" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Entrar</a>
-						<ul class="dropdown-menu" aria-labelledby="entrar">
-							<div class="col-md-12">
-								<p>Você possui uma conta?</h3>
-									<br />
-									<form method="post" action="validar_acesso.php" id="formLogin">
-										<div class="form-group">
-											<input type="text" class="form-control" id="campo_nome" name="email" placeholder="Seu e-mail" />
-										</div>
+		<nav class="navbar navbar-default navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<img src="imagens/logo.png" />
+				</div>
 
-										<div class="form-group">
-											<input type="password" class="form-control red" id="campo_senha" name="senha" placeholder="Senha" />
-										</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="inscrevase.php">Inscrever-se</a></li>
+						<li class="<?= $erro == 1 ? 'open' : '' ?>">
+							<a id="entrar" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Entrar</a>
+							<ul class="dropdown-menu" aria-labelledby="entrar">
+								<div class="col-md-12">
+									<p>Você possui uma conta?</h3>
+										<br />
+										<form method="post" action="validar_acesso.php" id="formLogin">
+											<div class="form-group">
+												<input type="text" class="form-control" id="campo_email" name="email" placeholder="Seu e-mail" />
+											</div>
 
-										<button type="buttom" class="btn btn-primary" id="btn_login">Entrar</button>
+											<div class="form-group">
+												<input type="password" class="form-control red" id="campo_senha" name="senha" placeholder="Senha" />
+											</div>
 
-										<br /><br />
+											<button type="buttom" class="btn btn-primary" id="btn_login">Entrar</button>
+
+											<br /><br />
+
+										</form>
+
+										<?php
+											if($erro == 1){
+												echo '<font color="#FF0000">Usuário e ou senha inválido(s)</font>';
+											}
+										?>
 
 									</form>
-
-									<?php
-										if($erro = 1){
-											echo '<font color="#FF0000">E-mail e ou senha inválido(s)</font>';
-										}
-									?>
-
-								</form>
-							</ul>
-						</li>
-					</ul>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</div>
+			</nav>
+
+
+			<div class="container">
+
+				<div class="jumbotron">
+					<h1>Bem vindo</h1>
+				</div>
+
+				<div class="clearfix"></div>
 			</div>
-		</nav>
 
 
-		<div class="container">
-
-			<div class="jumbotron">
-				<h1>Bem vindo</h1>
-			</div>
-
-			<div class="clearfix"></div>
 		</div>
 
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-	</div>
-
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-</body>
-</html>
+	</body>
+	</html>
