@@ -77,40 +77,38 @@ $erro = isset($_GET['erro']) ? $_GET['erro'] : 0;
 												<input type="password" class="form-control red" id="campo_senha" name="senha" placeholder="Senha" />
 											</div>
 
-											<button type="buttom" class="btn btn-primary" id="btn_login">Entrar</button>
+											<button type="submit" class="btn btn-primary" id="btn_login">Entrar</button>
 
 											<br /><br />
 
 										</form>
 
 										<?php
-											if($erro == 1){
-												echo '<font color="#FF0000">Usuário e ou senha inválido(s)</font>';
-											}
+										if($erro == 1){
+											echo '<font color="#FF0000">Usuário e ou senha inválido(s)</font>';
+										}
 										?>
-
-									</form>
-								</ul>
-							</li>
-						</ul>
+									</ul>
+								</li>
+							</ul>
+						</div>
 					</div>
+				</nav>
+
+
+				<div class="container">
+
+					<div class="jumbotron">
+						<h1>Bem vindo</h1>
+					</div>
+
+					<div class="clearfix"></div>
 				</div>
-			</nav>
 
 
-			<div class="container">
-
-				<div class="jumbotron">
-					<h1>Bem vindo</h1>
-				</div>
-
-				<div class="clearfix"></div>
 			</div>
 
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-		</div>
-
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-	</body>
-	</html>
+		</body>
+		</html>

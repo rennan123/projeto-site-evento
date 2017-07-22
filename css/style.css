@@ -1,0 +1,194 @@
+body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #000033;
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+#logo{
+	height: 70px;
+	margin-left: 15px;
+	margin-top: 15px;
+}
+.login{
+
+	border-color: #FFFFFF;
+	border-style: solid;
+	border-radius: 6px;
+	border-width: 1px;
+	min-height: 46vh;
+	width: 34vw;  
+}
+.contorno{
+	border-radius: 1000px;
+	border-style: solid;
+	border-color: #FF3333;
+	height: 100px;
+	width: 100px;
+	background-color: #FF3333;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -50px;
+	opacity: 0.95;
+}
+.formulario{
+	margin-left: auto;
+	margin-right: auto;
+}
+.branco{
+	background-color: #FFFFFF;
+	height: 3rem;
+	width: 30vw;
+    margin-top: 4vh;
+	margin-left: 2vw;
+	border-radius: 6px;
+}
+.imagem{
+	height: 1.2rem;
+	margin-top: 0.8rem;
+	margin-left: 0.8rem;
+}
+.caixa{
+	border: none;
+	font-size: 1rem;
+	height: 2rem;
+	width: 25vw;
+	margin-right: auto;
+	float: right;
+	margin-top: 0.5rem;
+	color: #707487;
+}
+#btn-entrar{
+	background-color: #FF9933;
+	margin-left: 7vw;
+	width: 20vw;
+	height: 2.3rem;
+    margin-top: 4vh;
+	color: #FFFFFF;
+	border-color: #FF9933;
+	border-style: solid;
+}
+
+#cadastro{
+	background-color: #707487;
+	width: 20vw;
+	height: 3rem;
+	border-radius: 0px 0px 20px 20px;
+	margin-top:8px;
+	border-color: #707487;
+	border-style: solid;
+	opacity: 0.7;
+}
+.linha{
+	color: #FFFFFF;
+	display: inline-block;
+	width: 100%;
+    margin-top: 4vh;
+	margin-left: 25px;
+}
+
+#invalido{
+	padding: 3px 40px;
+}
+
+a{
+	color: #FFFFFF;
+}
+#esqueceu{
+	margin-right: 55px;
+	text-align: right;
+	float:right;
+}
+#gamb{
+	color: white;
+	opacity: 1.5;
+}
+
+@media screen and (max-width:746px) {
+	.login {
+		width: 90vw;
+		min-height: 50vh;
+	}
+	.branco{
+		width: 86vw;
+	}
+	.caixa{
+		width: 68vw;
+	}
+	#btn-entrar{
+		width: 76vw;
+	}
+	#cadastro{
+		width: 76vw;
+	}
+}
+
+@media screen and (device-width:768px){
+	.login{
+		min-height: 50vh;
+		width: 90vw;
+	}
+	.branco{
+		width: 86vw;
+		margin-top: 6vh;
+	}
+	.caixa{
+		width: 68vw;
+	}
+	#btn-entrar{
+		width: 76vw;
+		margin-top: 6vh;
+	}
+	.linha{
+		margin-top: 6vh;
+	}
+	#cadastro{
+		width: 76vw;
+	}
+
+}
+@media screen and (device-width:1024px){
+	*{
+		font-size: 25px;
+	}
+	.login{
+		min-height: 50vh;
+		width: 90vw;
+	}
+	.branco{
+		width: 86vw;
+		margin-top: 6vh;
+	}
+	.caixa{
+		width: 68vw;
+	}
+	#btn-entrar{
+		width: 76vw;
+		margin-top: 6vh;
+	}
+	.linha{
+		margin-top: 6vh;
+	}
+	#cadastro{
+		width: 76vw;
+
+	}
+	#logo {
+		margin-top: 1vh;
+		margin-left: 1vh;
+	    height: 10vh;
+
+	}
+	.contorno {
+		margin-top: -6vh;
+	    height: 12vh;
+	    width: 12vh;
+	}
+
+
+}

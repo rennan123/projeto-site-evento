@@ -24,7 +24,7 @@
 			header('Location: home.php');
 
 		} else {
-			header('Location: index.php?erro=1');
+			header('Location: login.php?erro=1');
 		}
 	} else {
 		echo 'Erro na execução da consulta, favor entrar em contato com o admin do site';
