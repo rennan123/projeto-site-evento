@@ -64,10 +64,61 @@ $erro_email = isset($_GET['erro_email']) ? $_GET['erro_email'] : 0;
 						}
 					?>
 				</div>
-				
+
+                <div class="form-group">
+                    <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required="requiored">
+                </div>
+
 				<div class="form-group">
-					<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required="requiored">
-				</div>
+                    <input type="radio" name="sexo" id="masculino" value="M" checked>
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" name="sexo" id="feminino" value="F">
+                    <label for="feminino">Feminino</label><br>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="cpf" name="cpf" placeholder="cpf" required="requiored">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="rg" name="rg" placeholder="rg" required="requiored">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="telefone" name="telefone" placeholder="telefone" required="requiored">
+                </div>
+
+                <div class="form-group">
+                    <input type="date" class="form-control" id="datanascimento" name="datanascimento" placeholder="datanascimento" required="requiored">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="complemento" name="complemento" placeholder="complemento">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="rua" name="rua" placeholder="rua" required="requiored">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="bairro" name="bairro" placeholder="bairro" required="requiored">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="numero" name="numero" placeholder="numero" required="requiored">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="cidade" name="cidade" placeholder="cidade" required="requiored">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="cep" name="cep" placeholder="cep" required="requiored">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="estado" name="estado" placeholder="estado" required="requiored">
+                </div>
 				
 				<button type="submit" class="btn btn-primary form-control">Inscreva-se</button>
 			</form>

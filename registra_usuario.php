@@ -2,9 +2,22 @@
 
 require_once('conexao_bd.php');
 
-$nome = $_POST['nome'];
-$senha = md5($_POST['senha']);
 $email = $_POST['email'];
+$senha = md5($_POST['senha']);
+$nome = $_POST['nome'];
+$sexo = $_POST['sexo'];
+$cpf = $_POST['cpf'];
+$rg = $_POST['rg'];
+$telefone = $_POST['telefone'];
+$nascimento = $_POST['nascimento'];
+$cep = $_POST['cep'];
+$rua = $_POST['rua'];
+$complemento = $_POST['complemento'];
+$numero = $_POST['numero'];
+$bairro = $_POST['bairro'];
+$cidade = $_POST['cidade'];
+$estado = $_POST['estado'];
+
 
 $objBD = new bd();
 $link = $objBD->conecta_mysql();
@@ -13,6 +26,7 @@ $email_existe = false;
 
 //verificar se email ja existe
 $sql = " select * from usuario where email = '$email' ";
+
 if($resultado_id = mysqli_query($link, $sql)){
 
 	$dados_usuario = mysqli_fetch_array($resultado_id);
@@ -36,7 +50,7 @@ if($email_existe){
 	die();
 }
 
-$sql = " insert into usuario(nome, email, senha) values ('$nome', '$email', '$senha') ";
+$sql = "INSERT INTO usuario (email, senha, nome, sexo, cpf, rg, telefone, nascimento, cep, rua, complemento, numero, bairro, cidade, estado) VALUES ('$email', '$senha', '$nome', '$sexo', '$cpf', '$rg', '$telefone', '$nascimento', '$cep', '$rua', '$complemento', '$numero', '$bairro', '$cidade', '$estado')";
 
 	//executar a query
 if(mysqli_query($link, $sql)){
