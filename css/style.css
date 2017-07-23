@@ -40,8 +40,6 @@ body{
 	margin-right: auto;
 }
 .branco{
-	border: solid;
-	border-width: 5px;
 	background-color: #FFFFFF;
 	height: 3rem;
 	width: 30vw;
