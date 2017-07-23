@@ -1,0 +1,57 @@
+body{
+	background-color: #AEAEAF;
+	margin:0px !important;
+}
+ header{
+	background-color: #000033;
+	height: 10vh;
+}
+h3{
+	color: #000033;
+	margin-left: 70px;
+}
+
+label
+{
+	font-size: 18px;
+}
+
+span
+{
+	color: red;
+}
+
+.texto-centralizado
+{
+	text-align: center;
+}
+
+.btn
+{
+	padding-top: 13px !important;
+	padding-bottom: 13px !important;
+	padding-left: 25px !important;
+	padding-right: 25px !important; 
+	font-size: 14px;
+	border-radius: 8px;
+}
+
+.btn-laranja
+{
+	background-color: #FF9933;
+	color:#FFF;
+}
+
+.btn-laranja:hover,
+.btn-laranja:focus
+{
+	background-color: #FF870F;
+}
+
+#logo{
+	height: 9vh;
+	margin-left: 10px;
+}
+.formulario{
+	background-color: #AEAEAF;
+}

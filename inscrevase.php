@@ -1,6 +1,7 @@
 <?php 
 
 $erro_email = isset($_GET['erro_email']) ? $_GET['erro_email'] : 0;
+$erro_cpf = isset($_GET['erro_cpf']) ? $_GET['erro_cpf'] : 0;
 
 ?>
 
@@ -78,6 +79,11 @@ $erro_email = isset($_GET['erro_email']) ? $_GET['erro_email'] : 0;
 
                 <div class="form-group">
                     <input type="text" class="form-control" id="cpf" name="cpf" placeholder="cpf" required="requiored">
+                    <?php 
+                    	if($erro_cpf){
+                    		echo '<font style="color:#FF0000">CPF inválido!</font>';
+                    	}
+                    ?>
                 </div>
 
                 <div class="form-group">
@@ -89,7 +95,7 @@ $erro_email = isset($_GET['erro_email']) ? $_GET['erro_email'] : 0;
                 </div>
 
                 <div class="form-group">
-                    <input type="date" class="form-control" id="datanascimento" name="datanascimento" placeholder="datanascimento" required="requiored">
+                    <input type="date" class="form-control" id="datanascimento" name="nascimento" placeholder="datanascimento" required="requiored">
                 </div>
 
                 <div class="form-group">
