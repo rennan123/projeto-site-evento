@@ -1,0 +1,134 @@
+body{
+    background-color: #cccccc;
+    margin:0px !important;
+}
+header{
+    background-color: #000033;
+    height: 40px;
+    opacity: 1;
+}
+
+h3{
+    color: #000033;
+    margin-left: 70px;
+}
+
+label
+{
+    font-size: 18px;
+}
+
+span
+{
+    color: red;
+}
+
+.controle{
+    background: #000033;
+    float: left;    
+}
+
+
+.texto-centralizado
+{
+    text-align: center;
+}
+
+.btn
+{
+    padding-top: 13px !important;
+    padding-bottom: 13px !important;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.btn-laranja
+{
+    background-color: #FF9933;
+    color:#FFF;
+}
+
+.btn-laranja:hover,
+.btn-laranja:focus
+{
+    background-color: #FF870F;
+}
+
+#logo{
+    width: 150px;
+    height: auto;
+    margin-top: 25px;
+}
+
+#imagem-pessoa{
+    height: 40px;
+    margin-top: 3px;
+}
+
+.formulario{
+    color: #999999;
+    font-weight: bold;
+    background-color: #FFF;
+    float: left;
+}
+.container>h4{
+    color: black !important;
+    font-weight: bold !important;
+}
+
+.btn-sair{
+    float: right;
+    height: 35px;
+    color: #FF9966 !important;
+    background-color: #000033 !important;
+    border-color: #FFFFFF !important;
+    border-style: solid !important;
+    border-radius: 6px !important;  
+    border-style: solid !important;
+    padding-left: 20px !important;
+    padding-top:1px !important;
+    padding-right:20px !important;
+    padding-bottom:2px !important;
+    margin-top: 1.5px;
+    opacity: 1;
+}
+.btn-sair>a{
+    color: #FFFF99 ;
+    font-weight: bold;
+}
+
+.btn-sair>a:hover,
+.btn-sair>a:focus
+{
+    color: #FFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.texto{
+    color:#FFFFFF !important;
+    margin-top: 45px;
+    text-align: center;
+}
+.texto>a{
+    color:#FFFFFF !important;
+}
+
+.background-azul
+{
+    background: #000033 !important;   
+}
+
+.logo-icon
+{
+    width: 200px;
+    height: 200px;
+}
+
+.nsei
+{
+    background-color: #F5F5F5 !important;
+}
+

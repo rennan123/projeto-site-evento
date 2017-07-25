@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+	listenerMenu();
+
+
+
     $(".regular-pequeno").slick({
         infinite: true,
         slidesToShow: 1,
@@ -73,4 +77,19 @@ function limpaInputs()
 {
 	$("input").val("");
 	$("textarea").val(" ");
+}
+
+function listenerMenu()
+{
+	$(".efeito").click(function(event)
+	{
+		event.preventDefault();
+		var sectionId = $(this).attr("href");
+		$("html body").animate(
+		{
+			scrollTop: $(sectionId).offset().top
+		}, 1500)
+
+	})
+
 }

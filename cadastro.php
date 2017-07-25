@@ -2,6 +2,7 @@
 
 $erro_email = isset($_GET['erro_email']) ? $_GET['erro_email'] : 0;
 $erro_cpf = isset($_GET['erro_cpf']) ? $_GET['erro_cpf'] : 0;
+$erro_senha = isset($_GET['erro_senha']) ? $_GET['erro_senha'] : 0;
 
 ?>
 
@@ -28,7 +29,7 @@ $erro_cpf = isset($_GET['erro_cpf']) ? $_GET['erro_cpf'] : 0;
 				<div class="form-group mtop30">
 					  <label for="nome" class="col-12 col-form-label">Nome:<span> *</span></label>
 					  <div class="col-12 col-lg-12 col-md-12">
-					    <input class="form-control" name="nome" type="text" placeholder="Informe seu nome ..." id="nome" required="true">
+					    <input class="form-control" name="nome" type="text" placeholder="Informe seu nome ..." id="nome">
 					  </div>
 				</div>
 
@@ -52,7 +53,7 @@ $erro_cpf = isset($_GET['erro_cpf']) ? $_GET['erro_cpf'] : 0;
 
 					  		<label class="mtop20">Sexo:<span> *</span>
 
-					    	<select class="form-control mtop17" id="estado" name="sexo" required="true">
+					    	<select class="form-control mtop17" id="estado" name="sexo">>
 								<option selected="" value="">Selecione seu Sexo
 								</option>
 								<option value="M">Masculino</option>
@@ -157,10 +158,15 @@ $erro_cpf = isset($_GET['erro_cpf']) ? $_GET['erro_cpf'] : 0;
 					  <div class="col-6 col-sm-12 col-xs-12 col-12 col-lg-6 col-md-6">
 					  	<label for="cpf" class="mtop20">Senha:<span> *</span></label>
 					    <input class="form-control" name="senha" type="password" placeholder="Informe sua senha ..." id="senha" required="true">
+					    <?php 
+					    	if($erro_senha){
+					    		echo '<font style="color:#FF0000">Senha diferente da confirmação</font>';
+					    	}
+					    ?>
 					  </div>
 					  <div class="col-6 col-sm-12 col-xs-12 col-12  col-lg-6 col-md-6">
 					  	<label for="confsenha" class="mtop20">Confirmar Senha:<span> *</span></label>
-					    <input class="form-control" name="confsenha" type="password" placeholder="Informe a senha novamente para confirmá-la ..." id="confsenha" required="true">
+					    <input class="form-control" name="confirmar_senha" type="password" placeholder="Informe a senha novamente para confirmá-la ..." id="confsenha" required="true">
 					  </div>
 				</div>	
 

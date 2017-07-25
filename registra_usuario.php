@@ -3,7 +3,8 @@
 require_once('conexao_bd.php');
 
 $email = $_POST['email'];
-$senha = md5($_POST['senha']);
+$senha = $_POST['senha'];
+$confirmar_senha = $_POST['confirmar_senha'];
 $nome = $_POST['nome'];
 $sexo = $_POST['sexo'];
 $cpf = $_POST['cpf'];
@@ -88,6 +89,19 @@ if($resultado_id = mysqli_query($link, $sql)){
 } else {
 	echo 'Erro ao tentar localizar o registro de email';
 }
+
+
+
+if($senha !== $confirmar_senha) {
+
+    $retorno_get = '';
+    if ($senha !== $confirmar_senha) {
+        $retorno_get.= "erro_senha=1&";
+    }
+
+    header('Location: cadastro.php?'.$retorno_get);
+    die();
+ }
 
 if($email_existe){
 
