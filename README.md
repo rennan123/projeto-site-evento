@@ -1,4 +1,4 @@
 # projeto-site-evento
 
-Site do projeto final em equipe, sobre filosofia na grécia
-Site estático com informações ficticias apenas para o processo de efetivação dos participantes na organização.
+Website do projeto final em equipe, sobre filosofia na grécia.
+Foi desenvolvido um site de evento, com o tema principal de filosifia na grécia, o site é estático e com informações ficticias, com o objetivo principal de testar como a equipe se comportava trabalhando em grupo.
